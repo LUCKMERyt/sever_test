@@ -167,15 +167,128 @@ echo "<p></p>","----------------------------------------------------------------
 //
 //
 
+?>
+
+<!--//                                02.03.2026                -->
+
+<?php
+
+
+//class Plus{
+//    public $a =5;
+//    public $b =3;
+//    public function Plus(){
+//        echo '1 овтет сложение = ',$this->a ,'+',$this->b,' = ',$this->a+$this->b, "<br>";
+//
+//    }
+//}
+//$obj_plus= new Plus;
+//echo $obj_plus->Plus();
+//
+//
+//class Umno{
+//    public $a =2;
+//    public $b =3;
+//    public function Umnoj(){
+//        echo '2 овтет умножение = ',$this->a ,'*',$this->b,' = ',$this->a*$this->b, "<br>";
+//
+//    }
+//}
+//$obj_plus= new Umno;
+//echo $obj_plus->Umnoj();
+//$foo = "пример";
+//echo "пример — это $foo"; // пример — это пример
+
+
+
+//
+//class Person{
+//    public $name;
+//    public $fam;
+//    public $otches;
+//    public $age;
+//    public $mas;
+//    public $rost;
+//    function __construct($name,$fam,$otches,$age,$mas,$rost){
+//        $this->name = $name;
+//        $this->fam = $fam;
+//        $this->otches = $otches;
+//        $this->age = $age;
+//        $this->mas = $mas;
+//        $this->rost = $rost;
+//
+//        $index_mas_tela =$this->mas/($this->rost*$this->rost);
+//        echo 'Ваш индекс массы тела ='.$index_mas_tela, "<br>";
+//
+//
+//        if ($index_mas_tela < 16) {
+//            echo "выраженный дефицит массы тела", "<br>";
+//        }if ($index_mas_tela >=16.9) {
+//            echo "недостаточная масса (умеренный дефицит)", "<br>";
+//        }if ($index_mas_tela >=18.4) {
+//            echo "недостаточная масса (лёгкий дефицит)", "<br>";
+//        }if ($index_mas_tela >=24.9) {
+//            echo "нормальная масса тела", "<br>";
+//        }if ($index_mas_tela >=29.9 ) {
+//            echo "избыточная масса тела (предожирение)", "<br>";
+//        }if ($index_mas_tela >=34.9) {
+//            echo "избыточная масса тела (предожирение)", "<br>";
+//        }if ($index_mas_tela >=39.9) {
+//            echo "ожирение II степени", "<br>";
+//        }elseif ($index_mas_tela >=40) {
+//            echo "ожирение III степени (морбидное)", "<br>";
+//        }
+//
+//        echo "<p></p>","---------------------------------------------------------------------","<p></p>";
+//        echo "Менее 16.0 — выраженный дефицит массы тела","<br>",
+//            "16.0–16.9 — недостаточная масса (умеренный дефицит)","<br>",
+//            "17.0–18.4 — недостаточная масса (лёгкий дефицит)","<br>",
+//            "18.5–24.9 — нормальная масса тела","<br>",
+//            "25.0–29.9 — избыточная масса тела (предожирение)","<br>",
+//            "30.0–34.9 — ожирение I степени","<br>",
+//            "35.0–39.9 — ожирение II степени","<br>",
+//            "≥40.0 — ожирение III степени (морбидное)";
+//    }
+//
+//    function __destruct(){
+//        echo "<p></p>",'Программа завершила свои потсчеты';
+//
+//    }
+//}
+//
+//$obj_plus= new Person('Danila','shishov','Pavlovitch',19,52,1.75);
+
+
+
+
+//class Kryg{
+//    public $r;
+//    const PI=3.14;
+//
+//    public function __construct($r){
+//        $this->r=$r;
+//    }
+//    public function per(){
+//        return self::PI*($this->r*$this->r);
+//    }
+//
+//}
+//$obj=new Kryg(5);
+//print $obj->per();
+
+?>
+
+<?php
+
+
+
+
+
 
 
 
 
 
 ?>
-
-
-
-
 
 
