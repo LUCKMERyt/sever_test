@@ -291,38 +291,38 @@
 
 
 
-
-if($_GET !== null && ($_GET['param1'] === $_GET['param2'])){
-
-    try {
-        $host = '127.0.0.1';
-        $db = 'test';
-        $user = 'root';
-        $pass = '';
-        $charset = 'utf8';
-
-        $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-        $opt = [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-            PDO::ATTR_EMULATE_PREPARES => false,
-        ];
-        // Получение объекта PDO
-        $pdo = new PDO($dsn, $user, $pass, $opt);
-
-        // Получение данных из таблицы student по полю name
-        $stmt = $pdo->query('SELECT * FROM testik');
-
-    } catch (PDOException $e) {
-        die('Подключение не удалось: ' . $e->getMessage());
-    }
-
-    $results = $stmt->fetchAll();
-    $result = json_encode($results);
-    echo $result;
-}else{
-    return false;
-}
+//
+//if($_GET !== null && ($_GET['param1'] === $_GET['param2'])){
+//
+//    try {
+//        $host = '127.0.0.1';
+//        $db = 'test';
+//        $user = 'root';
+//        $pass = '';
+//        $charset = 'utf8';
+//
+//        $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+//        $opt = [
+//            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+//            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+//            PDO::ATTR_EMULATE_PREPARES => false,
+//        ];
+//        // Получение объекта PDO
+//        $pdo = new PDO($dsn, $user, $pass, $opt);
+//
+//        // Получение данных из таблицы student по полю name
+//        $stmt = $pdo->query('SELECT * FROM testik');
+//
+//    } catch (PDOException $e) {
+//        die('Подключение не удалось: ' . $e->getMessage());
+//    }
+//
+//    $results = $stmt->fetchAll();
+//    $result = json_encode($results);
+//    echo $result;
+//}else{
+//    return false;
+//}
 
 
 
@@ -402,4 +402,173 @@ if($_GET !== null && ($_GET['param1'] === $_GET['param2'])){
 
 ?>
 
+<?php
+//// Взаимодействие с front
+//
+//if($_GET !== null){
+//
+//
+//    $host = '127.0.0.1';
+//    $db = 'test';
+//    $user = 'root';
+//    $pass = '';
+//    $charset = 'utf8';
+//
+//    $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+//    $opt = [
+//        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+//        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+//        PDO::ATTR_EMULATE_PREPARES => false,
+//    ];
+//    // Получение объекта PDO
+//    $pdo = new PDO($dsn, $user, $pass, $opt);
+//
+////    $result = json_encode($_GET );
+//
+////    name,firstname, number_year ,email,nickname, pass
+//    $name = htmlspecialchars($_GET['name']);
+//    $firstname = htmlspecialchars($_GET['firstname']);
+//    $number_year = htmlspecialchars($_GET['number_year']);
+//    $email = htmlspecialchars($_GET['email']);
+//    $nickname = htmlspecialchars($_GET['nickname']);
+//    $pass = htmlspecialchars($_GET['pass']);
+//
+//    $stmt = $pdo->prepare("INSERT INTO regbasa (name,firstname,number_year,email,nickname, pass) VALUES (?, ?, ?, ?, ? ,?)");
+//    $stmt->bindParam(1, $name);
+//    $stmt->bindParam(2, $firstname);
+//    $stmt->bindParam(3, $number_year);
+//    $stmt->bindParam(4, $email);
+//    $stmt->bindParam(5, $nickname);
+//    $stmt->bindParam(6, $pass);
+//    $stmt->execute();
+//}else{
+//    return false;
+//}
+//?>
 
+
+
+
+
+<?php
+
+// echo "<pre>";
+// print_r($_SERVER);
+// echo "</pre>";
+
+// echo"============================================";
+// echo "<br/>";
+
+// $url = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . './/' . ;$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URL'];
+// echo $url;
+
+// echo"============================================";
+// echo "<br/>";
+
+
+// echo "</pre>";
+// var_dump(parse_url($url));
+// var_dump(parse_url($url, PHP_URL_SCHEME));
+// var_dump(parse_url($url, PHP_URL_USER));
+// var_dump(parse_url($url, PHP_URL_SCHEME));
+// var_dump(parse_url($url, PHP_URL_SCHEME));
+// var_dump(parse_url($url, PHP_URL_SCHEME));
+// var_dump(parse_url($url, PHP_URL_SCHEME));
+// var_dump(parse_url($url, PHP_URL_SCHEME));
+
+
+//$uri = $_SERVER['REQUEST_URL'];
+
+
+
+
+
+?>
+
+
+
+
+
+<?php
+//
+//if($_GET !== null){
+//
+//    try {
+//        $host = '127.0.0.1';
+//        $db = 'test';
+//        $user = 'root';
+//        $pass = '';
+//        $charset = 'utf8';
+//
+//        $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+//        $opt = [
+//            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+//            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+//            PDO::ATTR_EMULATE_PREPARES => false,
+//        ];
+//        // Получение объекта PDO
+//        $pdo = new PDO($dsn, $user, $pass, $opt);
+//
+//        // Получение данных из таблицы test_text по полю name
+//        $id = $_GET['id'];
+//        $stmt = $pdo->prepare("SELECT text FROM test_text WHERE id=?");
+//        $stmt->bindParam(1, $id);
+//        $stmt->execute();
+//
+//    } catch (PDOException $e) {
+//        die('Подключение не удалось: ' . $e->getMessage());
+//    }
+//
+//    $results = $stmt->fetchAll();
+//    $result = json_encode($results);
+//    echo $result;
+//}else{
+//    return false;
+//}
+//
+//?>
+
+
+
+
+<?php
+
+
+//// Подключение к БД (pdo.php)
+//include_once "pdo.php";
+//
+//$db = new DB();
+//$pdo = $db->connect();
+//
+//
+////http://localhost/myserver/get
+//
+//$uri = $_SERVER['REQUEST_URI'];
+//echo $uri;
+//
+//echo "<br />";
+//
+//
+//$uri = explode('?', $uri);
+//$uri = $uri[0];
+//echo $uri;
+//
+//
+//
+//if($uri === '/myserver/get')
+//    require 'get.php';
+//elseif($uri === '/myserver/post')
+//    require 'post.php';
+//else
+//    require '404.php';
+
+
+include_once "Route.php";
+
+$uri = explode('?', $_SERVER['REQUEST_URI']);
+$route = $uri[0];
+
+Route::getRoute($route);
+
+
+?>
