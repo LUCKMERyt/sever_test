@@ -1,5 +1,5 @@
 <?php
-// Взаимодействие с front
+// Взаимодействие с front - Регистрация пользователей PC Club
 
 include_once "pdo.php";
 
@@ -8,24 +8,27 @@ $pdo = $db->connect();
 
 if($_POST !== null){
 
-    $name = $_POST['name'];
-    $age =$_POST['age'];
-    $surname = $_POST['surname'];
+//        $nickname = $_POST['nickname'];
+//        $pass = $_POST['pass'];
+
+    $name = "nickname";
+    $email = "email";
+    $password="password";
+    $games="games";
 
 
-
-
-
-        $stmt = $pdo->prepare("INSERT INTO testik ($name,$age,$surname) VALUES (?, ?, ?)");
+        // INSERT в users
+        $stmt = $pdo->prepare("INSERT INTO users (name, email, password, games) VALUES (?, ?, ?, ?)");
         $stmt->bindParam(1, $name);
-        $stmt->bindParam(2, $age);
-        $stmt->bindParam(3, $surname);
+        $stmt->bindParam(2, $email);
+        $stmt->bindParam(3, $password);
+        $stmt->bindParam(4, $games);
+
         $stmt->execute();
-}else{
+
+    }else{
     return false;
-    echo "<br>";
-    echo "НЕ РАБОТАЕТ";
-};
+}
 
-
+?>
 
