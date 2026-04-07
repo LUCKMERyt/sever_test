@@ -5,6 +5,9 @@ $db = new DB();
 $pdo = $db->connect();
 
 header('Content-Type: application/json; charset=utf-8');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET');
+header('Access-Control-Allow-Headers: Content-Type');
 if (!empty($_GET['id'])) { // Безопасная проверка
 
     // Получение данных из таблицы student по полю id
@@ -20,4 +23,3 @@ if (!empty($_GET['id'])) { // Безопасная проверка
 }else{
     return false;
 }
-
